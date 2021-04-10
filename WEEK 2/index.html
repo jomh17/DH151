@@ -34,8 +34,18 @@
 		}).addTo(map);
 
 		var marker = L.marker([34.0697,-118.4432]).addTo(map)
-				.bindPopup('<font size="+2"><b>Miami</b></font> <br> I went on a vacation with my family here in the summer of 2017')
+				.bindPopup('<font size="+2"><b>Miami</b></font> <br> I went on a vacation with my family here in the summer of 2018')
 				.openPopup();	
+
+				var map = L.map('map').setView([34.0697,-118.4432], 17);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		var marker = L.marker([34.0697,-118.4432]).addTo(map)
+				.bindPopup('<font size="+2"><b>Lake Tahoe</b></font> <br> I love Lake Tahoe! I went to a family wedding here in the summer of 2017. I have been 2 more times since then during the winter to ski!')
+				.openPopup();
 
 	</script>
 
