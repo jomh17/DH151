@@ -85,41 +85,4 @@ let data = [
 },
 ];
 
-var map = L.map("map").setView([51.505, -0.09], 6);
-
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-attribution:
-	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
-data.forEach(function (item) {
-let popup = L.popup().setContent(
-	"<h2>" +
-		item.title +
-		"</h2> " +
-		item.description +
-		"<br /> <br /> <img src ='" +
-		item.url +
-		"' width=80% />"
-);
-L.marker([item.lat, item.lon]).addTo(map).bindPopup(popup).openPopup();
-});
-
-let ul = document.getElementById("nav");
-if (!ul) console.log("err");
-data.forEach(renderList);
-
-function renderList(elem, ind, arr) {
-let li = document.createElement("li");
-li.setAttribute("class", "item");
-
-let heading = document.createElement("h3");
-let desc = document.createElement("p");
-desc.setAttribute("class" , "desc");
-heading.innerHTML = elem.title;
-desc.innerHTML = elem.description;
-li.appendChild(heading);
-li.appendChild(desc);
-
-ul.appendChild(li);
-}
 
