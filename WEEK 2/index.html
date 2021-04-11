@@ -89,7 +89,7 @@
 		{
 			
 			L.marker([item.lat,item.lon]).addTo(map)
-				.bindPopup("<h3>" + item.title+ "<h3>"+ '<p>'+ item.description+'</p>' + "<br/> <br /> <img src=" item.url" width="80%")
+				.bindPopup("<h3>" + item.title+ "<h3>"+ '<p>'+ item.description+'</p>' + "<br/> <br /> <img src='" +item.url "'width=80% />")
 				.openPopup();	
 
 		})
