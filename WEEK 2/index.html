@@ -34,9 +34,11 @@
 
 	
 <script>
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+
+var map = L.map('map').setView([25.4612,-80.1124], 17);
+var marker = L.marker([25.4612,-80.1124]).addTo(map)
+				.bindPopup('<font size="+2"><b>Miami</b></font> <br> I went on a vacation with my family here in the summer of 2018. It was very fun but also very humid.')
+				.openPopup();
 
 let data = [
 	{
