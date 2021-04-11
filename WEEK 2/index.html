@@ -33,7 +33,12 @@
 	</div>
 
 	
-<script>let data = [
+<script>
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+let data = [
 	{
 		title: "Miami ",
 		description: "I went on a vacation with my family here in the summer of 2018. It was very fun but also very humid.",
