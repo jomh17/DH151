@@ -76,7 +76,7 @@
 			"I went here on a family vacation the summer of 2009. I saw Michelle and Malia Obama at lunch!",
 		lat: 38.5342,
 		lon: -77.0211,
-		pic:
+		url:
 			"https://imgur.com/WfntRzu",
 	},
 	];
@@ -88,7 +88,7 @@
 
 		data.forEach(function(item)
 		{
-			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= '"+ item.pic +"'width=300px");
+			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= '"+ item.url +"'width=300px");
 			L.marker([item.lat,item.lon]).addTo(map).bindPopup(popup).openPopup();	
 
 		})
