@@ -35,30 +35,6 @@
 	
 <script>
 
-var map = L.map('map').setView([25.4612,-80.1124], 17);
-var marker = L.marker([25.4612,-80.1124]).addTo(map)
-				.bindPopup('<font size="+2"><b>Miami</b></font> <br> I went on a vacation with my family here in the summer of 2018. It was very fun but also very humid.')
-				.openPopup();
-
-				var map = L.map('map').setView([39.096848,-120.032349], 17);
-var marker = L.marker([39.096848,-120.032349]).addTo(map)
-				.bindPopup('<font size="+2"><b>Lake Tahoe</b></font> <br> I love Lake Tahoe! I went to a family wedding here in the summer of 2017. I have been 2 more times since then during the winter to ski!')
-				.openPopup();
-				
-				var map = L.map('map').setView([24.00,-103.00], 17);
-var marker = L.marker([24.00,-103.00]).addTo(map)
-				.bindPopup('<font size="+2"><b>Cancun</b></font> <br> I went here on a family vacation in the summer of 2019. We stayed at the most beautiful resort and I surprisingly did not get sunburnt')
-				.openPopup();
-				
-				var map = L.map('map').setView([41.5204,-87.3954], 17);
-var marker = L.marker([41.5204,--87.3954]).addTo(map)
-				.bindPopup('<font size="+2"><b>Chicago</b></font> <br> I've been here twice! Most recently, I visited some of my friends who go to Loyola this winter. ')
-				.openPopup();
-				
-				var map = L.map('map').setView([38.5342,-77.0211], 17);
-var marker = L.marker([38.5342,-77.0211]).addTo(map)
-				.bindPopup('<font size="+2"><b>Washington D.C.</b></font> <br> I went here on a family vacation the summer of 2009. I saw Michelle and Malia Obama at lunch!')
-				.openPopup();
 
 	let cities = ['Miami','Lake Tahoe','Cancun','Chicago','Washington D.C.']
 	let data = [
@@ -103,7 +79,22 @@ var marker = L.marker([38.5342,-77.0211]).addTo(map)
 		url:
 			"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.telegraph.co.uk%2Ftravel%2Fdiscover-america%2Fwhat-to-do-in-washington-dc-in-3-days%2F&psig=AOvVaw1atXniLNVPEGr3OcsweBJ5&ust=1618187823519000&source=images&cd=vfe&ved=2ahUKEwi27LzE-fTvAhVyIH0KHWypBYAQr4kDegUIARDcAQ",
 	},
-	];</script>
+	];
+	
+	var map = L.map('map').setView([0,0], 2);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+		data.forEach(function(item)
+		{
+			
+			L.marker([item.lat,item.lon]).addTo(map)
+				.bindPopup('<h3>' + item.title+ '<h3>' + '<p>'+ item.description+'</p>')
+				.openPopup();	
+
+		})
+	
+	</script>
 
 
 <!-- <script>
