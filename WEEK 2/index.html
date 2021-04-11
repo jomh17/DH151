@@ -88,7 +88,7 @@
 
 		data.forEach(function(item)
 		{
-			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + '<br> img src= " + item.image"' );
+			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= " + item.url />");
 			L.marker([item.lat,item.lon]).addTo(map).bindPopup(popup).openPopup();	
 
 		})
