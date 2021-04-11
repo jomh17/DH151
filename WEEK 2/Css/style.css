@@ -29,6 +29,8 @@ body {
 	grid-area: sidebar;
 	padding:10px;
 	background-color: rgb(21, 177, 156);
+	color: white;
+	font-size: 2em;
 }
 
 .content {
