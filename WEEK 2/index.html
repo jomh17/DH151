@@ -60,7 +60,7 @@
 		lat: 24.00,
 		lon: -103.00,
 		url:
-			"https://www.mexicancaribbean.travel/cancun/",
+			"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mexicancaribbean.travel%2Fcancun%2F&psig=AOvVaw1eqRys1KUoAlTtAazEPCYW&ust=1618187926385000&source=images&cd=vfe&ved=2ahUKEwiRpsP1-fTvAhXNIDQIHdcxA8kQr4kDegUIARDPAQ",
 	},
 	{
 		title: "Chicago",
@@ -89,7 +89,7 @@
 		{
 			
 			L.marker([item.lat,item.lon]).addTo(map)
-				.bindPopup("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br/> <br /> <img src= '"+ item.url +"'width=300px'")
+				.bindPopup("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br/> <br /> <img src= '"+ item.url +"width=300px'")
 				.openPopup();	
 
 		})
