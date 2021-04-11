@@ -16,6 +16,7 @@
 </head>
 <body>
 
+
 	<div class="header">
 		<font size="+6">Places I've Been!</font> 
 	</div>
@@ -32,6 +33,53 @@
 	</div>
 
 	<script>
+
+et data = [
+{
+	title: "Miami ",
+	description: "I went on a vacation with my family here in the summer of 2018. It was very fun but also very humid.",
+	lat: 25.4612,
+	lon: -80.1124,
+	url:
+		"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.timeout.com%2Fmiami%2Fevents-calendar&psig=AOvVaw2D4UR-Z2EylTnKf2_Vxz0N&ust=1618187538966000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPCv07749O8CFQAAAAAdAAAAABAD",
+},
+{
+	title: "Lake Tahoe",
+	description: "I love Lake Tahoe! I went to a family wedding here in the summer of 2017. I have been 2 more times since then during the winter to ski!",
+	lat: 39.096848,
+	lon: -120.032349,
+	url:
+		"https://www.google.com/url?sa=i&url=https%3A%2F%2Fmynews4.com%2Fnews%2Flocal%2Fultraviolet-light-used-to-kill-algae-at-lake-tahoe&psig=AOvVaw2c-nU6d-CcwJ65OCY0VLyO&ust=1618187587692000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCJDhhdb49O8CFQAAAAAdAAAAABAK",
+},
+{
+	title: "Cancun",
+	description: "I went here on a family vacation in the summer of 2019. We stayed at the most beautiful resort and I surprisingly  did not get sunburnt",
+	lat: 24.00,
+	lon: -103.00,
+	url:
+		"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mexicancaribbean.travel%2Fcancun%2F&psig=AOvVaw1eqRys1KUoAlTtAazEPCYW&ust=1618187926385000&source=images&cd=vfe&ved=2ahUKEwiRpsP1-fTvAhXNIDQIHdcxA8kQr4kDegUIARDPAQ",
+},
+{
+	title: "Chicago",
+	description: "I've been here twice! Most recently, I visited some of my friends who go to Loyola this winter.",
+	lat: 41.5204,
+	lon: -87.3954,
+	url:
+		"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cntraveler.com%2Fgallery%2Fbest-things-to-do-in-chicago&psig=AOvVaw0xjzQh_D3rGja7ke3o4qs3&ust=1618187848069000&source=images&cd=vfe&ved=2ahUKEwiDn5fQ-fTvAhXQHTQIHZVfCg0Qr4kDegUIARDXAQ",
+},
+{
+	title: "Washington DC",
+	description:
+		"I went here on a family vacation the summer of 2009. I saw Michelle and Malia Obama at lunch!",
+	lat: 38.5342,
+	lon: -77.0211,
+	url:
+		"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.telegraph.co.uk%2Ftravel%2Fdiscover-america%2Fwhat-to-do-in-washington-dc-in-3-days%2F&psig=AOvVaw1atXniLNVPEGr3OcsweBJ5&ust=1618187823519000&source=images&cd=vfe&ved=2ahUKEwi27LzE-fTvAhVyIH0KHWypBYAQr4kDegUIARDcAQ",
+},
+];
+
+
+
 		<!--  var map = L.map('map').setView([25.4612,80.1124], 17);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -53,50 +101,6 @@
 				.bindPopup('<font size="+2"><b>Lake Tahoe</b></font> <br> I love Lake Tahoe! I went to a family wedding here in the summer of 2017. I have been 2 more times since then during the winter to ski!')
 				.openPopup();
 -->
-
-let data = [
-{
-	title: "Din Tai ",
-	description: "A dumpling house that specializes in Xiao Long Bao",
-	lat: 33.6917,
-	lon: -117.8881,
-	url:
-		"https://dynaimage.cdn.cnn.com/cnn/q_auto,w_900,c_fill,g_auto,h_506,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F181213162542-xiao-long-bao---courtesy-ding-tai-fung.jpg",
-},
-{
-	title: "Howlin' Ray's",
-	description: "Literally fire chicken",
-	lat: 34.0615,
-	lon: -118.24,
-	url:
-		"https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/27971892_1020172884827147_8779453500777389462_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=e3f864&_nc_ohc=3m9s9pFYQ0gAX95LPOB&_nc_ht=scontent-lax3-1.xx&oh=9a4881db633c5b67dfd2b250d4a5525e&oe=609209E0",
-},
-{
-	title: "Sedona",
-	description: "Radiator springs vibes with the red rocks",
-	lat: 34.8697,
-	lon: -111.761,
-	url:
-		"https://canyonvilla.com/wp-content/uploads/2017/10/sm_slides_8-640x475.jpg",
-},
-{
-	title: "Etihad Stadium",
-	description: "Manchester City football stadium",
-	lat: 53.4831,
-	lon: -2.2004,
-	url:
-		"https://www.thestadiumbusiness.com/wp-content/uploads/2021/03/EtihadStadiumCrop.jpg",
-},
-{
-	title: "Multnomah Falls",
-	description:
-		"A gorgeous waterfall along the Columbia Gorge on the border of Washington and Oregon",
-	lat: 45.5762,
-	lon: -122.1158,
-	url:
-		"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Multnomah_Falls_on_2_August_2012.jpg/250px-Multnomah_Falls_on_2_August_2012.jpg",
-},
-];
 
 
 	</script>
