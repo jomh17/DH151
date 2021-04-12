@@ -34,7 +34,7 @@
 		"https://media.cntraveler.com/photos/5f8f09c3a078e9112956774d/16:9/w_1200%2Cc_limit/Chicago-GettyImages-1065188752.jpg",
 	},
 	{
-		title: "<b> Washington DC </b>",
+		title: "Washington DC",
 		description:
 			"I went here on a family vacation the summer of 2009. I saw Michelle and Malia Obama at lunch!",
 		lat: 38.5342,
