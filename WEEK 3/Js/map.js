@@ -49,19 +49,29 @@
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 
+let myMarkers= L.featureGroup();
+
+
+
+
+
 		data.forEach(function(item, index)
 		{
 			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= '" + item.url + "' width=300px />");
-			L.marker([item.lat,item.lon]).addTo(map).bindPopup(popup).openPopup();	
+			let marker= L.marker([item.lat,item.lon]).bindPopup(popup).openPopup();	
 
+myMarkers.addLayer(marker)
 
-
-			$(".sidebar").append(`<div class="sidebar-item" onclick="flyToIndex(${index})"> ${item.title} </div>`)
+			$(".sidebar").append(`<div class="sidebar-item" 
+			onclick="flyToIndex(${index})"> ${item.title} </div>`)
 		})
 
-		function flyToIndex(index){
+myMarkers.addTo(map)
 
-map.flyTo([data[index].lat, data[index].lon],12)
+
+function flyToIndex(index){
+
+ 	map.flyTo([data[index].lat, data[index].lon],12)
 
 		}
 	
