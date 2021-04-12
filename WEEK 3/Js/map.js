@@ -68,6 +68,11 @@ myMarkers.addLayer(marker)
 
 myMarkers.addTo(map)
 
+let layers= {
+"My Markers": myMarkers
+
+}
+
 
 function flyToIndex(index){
 
