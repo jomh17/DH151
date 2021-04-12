@@ -21,7 +21,7 @@
 		title: "Cancun",
 		description: "I went here on a family vacation in the summer of 2019. We stayed at the most beautiful resort and I surprisingly  did not get sunburnt",
 		lat: 24.00,
-		lon: -103.00,
+		lon: -86.8515,
 		url:
 		"https://k9h2z2w9.stackpathcdn.com/wp-content/uploads/Cancun-Beaches-Aerial-NBS-750x375.jpg",
 	},
