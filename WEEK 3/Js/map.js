@@ -56,6 +56,6 @@
 
 
 
-			$(".sidebar").append(item.title)
+			$(".sidebar").append(`<div class="sidebar.item"> ${item.title} </div>`)
 		})
 	
