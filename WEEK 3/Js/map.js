@@ -69,7 +69,7 @@ myMarkers.addLayer(marker)
 myMarkers.addTo(map)
 
 let layers= {
-"My Markers": myMarkers
+"Places!": myMarkers
 }
 
 L.control.layers(null,layers).addTo(map)
