@@ -63,7 +63,7 @@ let myMarkers= L.featureGroup();
 myMarkers.addLayer(marker)
 
 			$(".sidebar").append(`<div class="sidebar-item" 
-			onclick="flyToIndex(${index})"> ${item.title} </div>`)
+			onclick="flyToIndex(${index})"> <center>${item.title} </center> </div>`)
 		})
 
 myMarkers.addTo(map)
