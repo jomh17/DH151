@@ -54,5 +54,8 @@
 			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= '" + item.url + "' width=300px />");
 			L.marker([item.lat,item.lon]).addTo(map).bindPopup(popup).openPopup();	
 
+
+
+			$(".sidebar").append(item.title)
 		})
 	
