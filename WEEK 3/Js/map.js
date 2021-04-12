@@ -70,9 +70,9 @@ myMarkers.addTo(map)
 
 let layers= {
 "My Markers": myMarkers
-
 }
 
+L.control.layers(null,layers).addTo(map)
 
 function flyToIndex(index){
 
