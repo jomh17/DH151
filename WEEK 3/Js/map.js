@@ -75,8 +75,7 @@ let layers= {
 L.control.layers(null,layers).addTo(map)
 
 function flyToIndex(index){
-
  	map.flyTo([data[index].lat, data[index].lon],12)
-
+	myMarkers.getLayers()[index].openPopup()
 		}
 	
