@@ -58,4 +58,10 @@
 
 			$(".sidebar").append(`<div class="sidebar-item" onclick="alert()"> ${item.title} </div>`)
 		})
+
+		function flyToIndex(index){
+
+map.flyTo([data[index].lat, data[index].lon],12)
+
+		}
 	
