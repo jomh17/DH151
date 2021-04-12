@@ -36,3 +36,15 @@ body {
 .content {
 	grid-area: content;
 }
+
+.sidebar-item {
+
+padding: 10px;
+background: white
+border: 1px solid pink;
+margin: 5px;
+
+}
+
+
+
