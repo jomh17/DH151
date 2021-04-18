@@ -43,9 +43,9 @@ padding: 10px;
 background: rgb(179, 81, 224);
 border: 5px solid rgb(196, 102, 191);
 margin: 5px;
-cursor: pointer; /* change cursor to hand on hover */
-	border-radius: 13px;
-	text-align: center;
+cursor: pointer; 
+border-radius: 13px;
+text-align: center;
 }
 
 .sidebar-item:hover {
