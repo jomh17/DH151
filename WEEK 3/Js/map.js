@@ -61,6 +61,7 @@
 	  
 
 	var map = L.map('map').setView([0,0], 2);
+
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
@@ -71,7 +72,7 @@ let myMarkers= L.featureGroup();
 		data.forEach(function(item, index)
 		{
 			let popup= L.popup( ).setContent ("<h3>" + item.title + "<h3>"+ '<p>'+ item.description+'</p>' + "<br /> <img src= '" + item.url + "' width=300px />");
-			let marker= L.marker([item.lat,item.lon]).bindPopup(popup).openPopup();	
+			let marker= L.marker([item.lat,item.lon],{icon: greenIcon}).bindPopup(popup).openPopup();	
 
 myMarkers.addLayer(marker)
 
