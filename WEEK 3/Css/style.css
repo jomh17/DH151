@@ -48,7 +48,7 @@ margin: 5px;
 
 .sidebar-item:hover {
 	background: gainsboro;
-	border: 1px solid gray;
+	border: 5px solid rgb(83, 20, 228);
 }
 /* make button click*/
 .sidebar-item:active {
