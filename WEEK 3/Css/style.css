@@ -24,6 +24,11 @@ body {
 	color: white;
 	text-align: center;
 	font-size: 2em;
+	.outline {
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: cyan;
+	}
+	
 }
 
 .sidebar {
