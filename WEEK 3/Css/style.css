@@ -24,7 +24,7 @@ body {
 	color: white;
 	text-align: center;
 	font-size: 2em;
-	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: rgb(19, 22, 22);
 	font-weight: bolder;
 	font-size: 40px;
