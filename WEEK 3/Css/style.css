@@ -19,7 +19,7 @@ body {
 
 .header {
 	grid-area: header;
-	padding: 3px;
+	padding: 25px;
 	background-color: rgb(46, 155, 155);
 	color: white;
 	text-align: center;
