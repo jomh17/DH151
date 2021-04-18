@@ -46,5 +46,14 @@ margin: 5px;
 
 }
 
+.sidebar-item:hover {
+	background: gainsboro;
+	border: 1px solid gray;
+}
+/* make button click*/
+.sidebar-item:active {
+	background: gainsboro;
+	transform: translateY(4px);
+  }
 
 
