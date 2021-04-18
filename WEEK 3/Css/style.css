@@ -20,7 +20,7 @@ body {
 .header {
 	grid-area: header;
 	padding: 3px;
-	background-color: rgb(47, 208, 230);
+	background-color: rgb(46, 155, 155);
 	color: white;
 	text-align: center;
 	font-size: 2em;
@@ -29,7 +29,7 @@ body {
 .sidebar {
 	grid-area: sidebar;
 	padding:10px;
-	background-color: rgb(100, 177, 167);
+	background-color: rgb(87, 177, 139);
 	color: white;
 	font-size: 2em;
 }
