@@ -45,7 +45,7 @@ body {
 
 padding: 10px;
 background: linear-gradient(90deg, rgb(161, 55, 202) 0%, rgb(51, 228, 160) 100%);
-border: 5px solid rgb(231, 168, 210);
+border: 10px solid rgb(231, 168, 210);
 margin: 5px;
 cursor: pointer; 
 border-radius: 13px;
