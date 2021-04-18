@@ -37,7 +37,7 @@ body {
 	background-color: rgb(87, 177, 139);
 	color: white;
 	font-size: 2em;
-	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: rgb(19, 22, 22);
 }
 
