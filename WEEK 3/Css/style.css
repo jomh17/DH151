@@ -47,7 +47,7 @@ margin: 5px;
 }
 
 .sidebar-item:hover {
-	background: gainsboro;
+	background: rgb(136, 129, 224);
 	border: 5px solid rgb(83, 20, 228);
 }
 /* make button click*/
