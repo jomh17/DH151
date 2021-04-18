@@ -54,7 +54,7 @@ text-align: center;
 
 .sidebar-item:hover {
 	background: rgb(136, 129, 224);
-	border: 5px solid rgb(83, 20, 228);
+	border: 7px solid rgb(83, 20, 228);
 }
 
 .sidebar-item:active {
