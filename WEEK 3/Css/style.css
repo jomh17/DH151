@@ -20,22 +20,21 @@ body {
 .header {
 	grid-area: header;
 	padding: 25px;
-	background-color: rgb(46, 155, 155);
+
 	color: white;
 	text-align: center;
 	font-size: 2em;
 	font-weight: bolder;
 	font-size: 40px;
-	background: linear-gradient(90deg, rgb(51, 133, 228) 0%,  rgb(77, 219, 200) 100%,);
+	background: linear-gradient(90deg, rgb(51, 97, 223) 0%, rgb(24, 223, 140) 100%);
 }
 
 .sidebar {
 	grid-area: sidebar;
 	padding:10px;
-	background-color: rgb(87, 177, 139);
 	color: white;
 	font-size: 2em;
-	background: linear-gradient(90deg, rgb(77, 219, 200) 0%, rgb(51, 133, 228) 100%);
+	background: linear-gradient(90deg, rgb(79, 77, 219) 0%, rgb(51, 228, 160) 100%);
 }
 
 .content {
