@@ -58,7 +58,7 @@
 		shadowSize: [41, 41]
 	  });
 	  
-	  L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+	  
 
 	var map = L.map('map').setView([0,0], 2);
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
