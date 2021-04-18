@@ -64,7 +64,7 @@ myMarkers.addLayer(marker)
 
 			$(".sidebar").append(`<div class="sidebar-item" 
 			onclick="flyToIndex(${index})"> <center>${item.title} </center> </div>`)
-			pink-dot.png
+			
 		})
 
 myMarkers.addTo(map)
