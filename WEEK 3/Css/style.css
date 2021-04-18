@@ -20,7 +20,7 @@ body {
 .header {
 	grid-area: header;
 	padding: 5px;
-	background-color: rgb(31, 84, 197);
+	background-color: rgb(47, 208, 230);
 	color: white;
 	font-size: 2em;
 }
