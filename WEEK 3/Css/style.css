@@ -40,8 +40,8 @@ body {
 .sidebar-item {
 
 padding: 10px;
-background: lavender;
-border: 10px solid pink;
+background: rgb(168, 51, 223);
+border: 10px solid rgb(221, 69, 213);
 margin: 5px;
 
 }
