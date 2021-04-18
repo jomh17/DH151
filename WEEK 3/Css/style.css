@@ -24,10 +24,10 @@ body {
 	color: white;
 	text-align: center;
 	font-size: 2em;
-	
-		-webkit-text-stroke-width: 1.5px;
-		-webkit-text-stroke-color: rgb(19, 22, 22);
-	
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: rgb(19, 22, 22);
+	font-weight: bolder;
+	font-size: 30px;
 	
 }
 
@@ -38,7 +38,7 @@ body {
 	color: white;
 	font-size: 2em;
 	-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: rgb(19, 22, 22);
+	-webkit-text-stroke-color: rgb(19, 22, 22);
 }
 
 .content {
