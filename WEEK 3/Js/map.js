@@ -38,7 +38,7 @@
 		
 	},
 	{
-		title: "<b>Washington DC</b>",
+		title: "Washington DC",
 		url:
 			"https://www.telegraph.co.uk/content/dam/travel/Spark/brand-usa-2018/washinton-dc-mall-xlarge.jpg",
 		description:
