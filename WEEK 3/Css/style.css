@@ -24,8 +24,7 @@ body {
 	color: white;
 	text-align: center;
 	font-size: 2em;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: rgb(6, 73, 73);
+	text-shadow: 2px 2px #ff0000
 	font-weight: bolder;
 	font-size: 40px;
 	
@@ -37,7 +36,7 @@ body {
 	background-color: rgb(87, 177, 139);
 	color: white;
 	font-size: 2em;
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgb(12, 63, 48);
 }
 
