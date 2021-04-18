@@ -19,7 +19,7 @@ body {
 
 .header {
 	grid-area: header;
-	padding: 5px;
+	padding: 3px;
 	background-color: rgb(47, 208, 230);
 	color: white;
 	font-size: 2em;
@@ -52,7 +52,7 @@ text-align: center;
 	background: rgb(136, 129, 224);
 	border: 5px solid rgb(83, 20, 228);
 }
-/* make button click*/
+
 .sidebar-item:active {
 	background: gainsboro;
 	transform: translateY(4px);
