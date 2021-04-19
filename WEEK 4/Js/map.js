@@ -45,7 +45,7 @@ function readCSV(path){
 
 
 function mapCSV(data){
-	
+
 	// circle options
 	let circleOptions = {
 		radius: 5,
@@ -57,16 +57,19 @@ function mapCSV(data){
 
 	// loop through each entry
 	data.data.forEach(function(item,index){
-		// create marker
+		// create a marker
 		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
+		.on('mouseover',function(){
+			this.bindPopup(`${item.title}<br><img src="${item.thumbnail_url}">`).openPopup()
+		})
 
-		// add marker to featuregroup		
+		// add marker to featuregroup
 		markers.addLayer(marker)
 	})
 
 	// add featuregroup to map
 	markers.addTo(map)
 
-	// fit markers to map
+	// fit map to markers
 	map.fitBounds(markers.getBounds())
 }
