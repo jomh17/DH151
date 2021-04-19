@@ -8,10 +8,7 @@ let path = "data/dunitz.csv";
 // global variables
 let markers = L.featureGroup();
 
-// initialize
-$( document ).ready(function() {
-    createMap(lat,lon,zl);
-});
+
 
 // create the map
 function createMap(lat,lon,zl){
