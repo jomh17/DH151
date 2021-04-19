@@ -22,6 +22,12 @@ function createMap(lat,lon,zl){
 	}).addTo(map);
 }
 
+// initialize
+$( document ).ready(function() {
+	createMap(lat,lon,zl);
+	readCSV(path);
+});
+
 // function to read csv data
 function readCSV(path){
 	Papa.parse(path, {
@@ -37,12 +43,6 @@ function readCSV(path){
 	});
 }
 
-
-// initialize
-$( document ).ready(function() {
-	createMap(lat,lon,zl);
-	readCSV(path);
-});
 
 function mapCSV(data){
 	
