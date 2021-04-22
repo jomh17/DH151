@@ -11,8 +11,8 @@ let markers = L.featureGroup();
 
 
 // create the map
-function createMap(lat,lon,zl){
-	map = L.map('map').setView([lat,lon], zl);
+function createMap(latitude,longitude,zl){
+	map = L.map('map').setView([latitude,longitude], zl);
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
