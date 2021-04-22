@@ -55,7 +55,6 @@ function mapCSV(data){
 	// add featuregroup to map
 	markers.addTo(map)
 
-
 	// fit markers to map
 	map.fitBounds(markers.getBounds())
 }
