@@ -40,6 +40,7 @@ body {
 }
 
 .footer {
+    color: white
 	grid-area: footer;
 	padding:10px;
 	background-color: rgb(33, 94, 48);
