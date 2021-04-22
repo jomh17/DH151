@@ -4,7 +4,7 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 // path to csv data
-let path = "data/dunitz.csv";
+let path = "data/caribu.csv";
 // global variables
 let markers = L.featureGroup();
 
