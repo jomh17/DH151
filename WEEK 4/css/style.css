@@ -1,1 +1,48 @@
 
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 80px 1fr 50px;
+	grid-template-columns: 30% 70%;
+	grid-template-areas: 
+	"header header"
+	"sidebar content"
+	"footer footer";
+}
+
+.header {
+	grid-area: header;
+	padding:15px;
+	background-color: rgb(109, 69, 9);
+	color: white;
+	font-size: 2em;
+}
+
+.sidebar {
+	color: white;
+	grid-area: sidebar;
+	padding:35px;
+	background-color: rgb(145, 100, 49);
+	
+}
+
+.content {
+	grid-area: content;
+}
+
+.footer {
+    color: white;
+	grid-area: footer;
+	padding:10px;
+	background-color: rgb(33, 94, 48);
+
+}
