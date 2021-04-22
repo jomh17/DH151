@@ -9,6 +9,7 @@ let path = "data/caribu.csv";
 let markers = L.featureGroup();
 
 
+
 // create the map
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
