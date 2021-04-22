@@ -8,6 +8,8 @@ let path = "data/caribu.csv";
 // global variables
 let markers = L.featureGroup();
 
+
+
 var orangeIcon = new L.Icon({
 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
 	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',

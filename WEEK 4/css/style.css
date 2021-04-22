@@ -35,6 +35,27 @@ body {
 	
 }
 
+.sidebar-item {
+
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(161, 55, 202) 0%, rgb(51, 228, 160) 100%);
+    border: 7px solid rgb(230, 113, 191);
+    margin: 5px;
+    cursor: pointer; 
+    border-radius: 13px;
+    text-align: center;
+    }
+    
+    .sidebar-item:hover {
+        background: rgb(136, 129, 224);
+        border: 7px solid rgb(83, 20, 228);
+    }
+    
+    .sidebar-item:active {
+        background: gainsboro;
+        transform: translateY(4px);
+      }
+
 .content {
 	grid-area: content;
 }
