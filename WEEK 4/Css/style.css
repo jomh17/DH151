@@ -31,7 +31,7 @@ body {
 	color: white;
 	grid-area: sidebar;
 	padding:10px;
-	background-color: #555;
+	background-color: rgb(110, 64, 238);
 	overflow: auto;
 }
 
