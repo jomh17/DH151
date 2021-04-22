@@ -61,6 +61,7 @@ function mapCSV(data){
 
 		// add marker to featuregroup
 		markers.addLayer(marker)
+		
 	})
 
 	// add featuregroup to map
