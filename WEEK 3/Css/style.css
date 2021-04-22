@@ -31,6 +31,7 @@ body {
 
 .sidebar {
 	grid-area: sidebar;
+	width: 200 px;
 	padding:10px;
 	color: white;
 	font-size: 2em;
