@@ -30,7 +30,7 @@ body {
 .sidebar {
 	color: white;
 	grid-area: sidebar;
-	padding:10px;
+	padding:5px;
 	background-color: rgb(110, 64, 238);
 	overflow: auto;
 }
