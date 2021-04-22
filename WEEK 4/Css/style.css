@@ -44,4 +44,9 @@ body {
 	grid-area: footer;
 	padding:10px;
 	background-color: rgb(33, 94, 48);
+    a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
 }
