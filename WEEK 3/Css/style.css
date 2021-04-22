@@ -45,7 +45,7 @@ body {
 .sidebar-item {
 
 padding: 10px;
-background: linear-gradient(90deg, rgb(161, 55, 202) 0%, rgb(51, 228, 160) 100%);
+background: linear-gradient(90deg, rgb(55, 202, 133) 0%, rgb(43, 60, 209) 100%);
 border: 7px solid rgb(230, 113, 191);
 margin: 5px;
 cursor: pointer; 
