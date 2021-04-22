@@ -8,7 +8,18 @@ let path = "data/caribu.csv";
 // global variables
 let markers = L.featureGroup();
 
+var orangeIcon = new L.Icon({
+	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-orange.png',
+	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+  });
+  
+  
 
+var map = L.map('map').setView([0,0], 2);
 
 // create the map
 function createMap(lat,lon,zl){
@@ -46,7 +57,7 @@ function mapCSV(data){
 	// loop through each entry
 	data.data.forEach(function(item,index){
 		// create marker
-		let marker = L.marker([item.latitude,item.longitude])
+		let marker = L.marker([item.latitude,item.longitude],{icon: orangeIcon})
 
 		// add marker to featuregroup
 		markers.addLayer(marker)
