@@ -19,8 +19,6 @@ var orangeIcon = new L.Icon({
   
   
 
-var map = L.map('map').setView([0,0], 2);
-
 // create the map
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
