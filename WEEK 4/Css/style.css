@@ -44,24 +44,5 @@ body {
 	grid-area: footer;
 	padding:10px;
 	background-color: rgb(33, 94, 48);
-    a:link {
-        color: green;
-        background-color: transparent;
-        text-decoration: none;
-      }
-      a:visited {
-        color: pink;
-        background-color: transparent;
-        text-decoration: none;
-      }
-      a:hover {
-        color: red;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-      a:active {
-        color: yellow;
-        background-color: transparent;
-        text-decoration: underline;
-      }
+
 }
