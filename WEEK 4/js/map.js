@@ -9,7 +9,7 @@ let path = "data/caribu.csv";
 let markers = L.featureGroup();
 
 var orangeIcon = new L.Icon({
-	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-orange.png',
+	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
 	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 	iconSize: [25, 41],
 	iconAnchor: [12, 41],
@@ -17,7 +17,7 @@ var orangeIcon = new L.Icon({
 	shadowSize: [41, 41]
   });
   
-  
+
 
 // create the map
 function createMap(lat,lon,zl){
