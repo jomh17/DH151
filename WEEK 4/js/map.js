@@ -75,7 +75,7 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
-"type"; "Feature",
+{"type"; "Feature",
            "geometry"; {
                "type"; "Polygon",
                "coordinates"; [
@@ -88,3 +88,4 @@ function mapCSV(data){
                    ]
                ]
            }
+		}
