@@ -21,6 +21,21 @@ var orangeIcon = new L.Icon({
   
 
 
+//Create Goshute polygon
+var polygon = L.polygon([
+	[41.72549565609825, -113.75055818577421],
+	[41.01681558776163, -114.54394648763801],
+	[38.10834298498779, -114.96395299377926],
+	[38.17006686582158, -112.14239248631804],
+	[40.87636446002296, -110.73014851250934]
+	]).addTo(map);
+
+polygon.bindPopup("Goshute Lands");
+polygon.setStyle({fillColor: '#ffb01f'});
+
+
+
+
 // create the map
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
@@ -70,3 +85,4 @@ function mapCSV(data){
 	// fit markers to map
 	map.fitBounds(markers.getBounds())
 }
+
