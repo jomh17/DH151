@@ -8,7 +8,7 @@ let path = "data/caribu.csv";
 // global variables
 let markers = L.featureGroup();
 
-
+let myMarkers = L.featureGroup();
 
 var orangeIcon = new L.Icon({
 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
@@ -92,7 +92,7 @@ polygon.bindPopup("Goshute Lands");
 polygon.setStyle({fillColor: '#ffb01f'});
 
 
-let myMarkers = L.featureGroup();
+
 
 myMarkers.addTo(map)
 
