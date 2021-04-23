@@ -75,15 +75,17 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
-//Create Ute polygon
-var polygon = L.polygon([
-	[40.760137273238215, -111.46583288226628],
-	[38.63644980131417, -112.43751960683204],
-	[35.72989817950143, -111.23739988743795],
-	[36.23471513254453, -104.77956909241148],
-	[38.23860971000406, -103.36989111690026],
-	[40.65280539639901, -104.07188492293405]
-	]).addTo(map);
+use Ivory\GoogleMap\Base\Coordinate;
+use Ivory\GoogleMap\Overlay\Polygon;
 
-polygon.bindPopup("Núu-agha-tʉvʉ-pʉ̱  (Ute) Lands");
-polygon.setStyle({fillColor: '#ffff1f'});
+$polygon = new Polygon(
+    [
+        new Coordinate(25.774, -80.190),
+        new Coordinate(18.466, -66.118),
+        new Coordinate(32.321, -64.757),
+        new Coordinate(25.774, -80.190),
+    ],
+    ['fillOpacity' => 0.5]
+);
+$polygon->setOption('fillOpacity', 0.5);
+$map->getOverlayManager()->addPolygon($polygon);
