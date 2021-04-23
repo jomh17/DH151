@@ -66,6 +66,8 @@ function mapCSV(data){
 		// add marker to featuregroup
 		markers.addLayer(marker)
 		
+		// add marker to featuregroup
+myMarkers.addLayer(marker)
 	})
 
 	// add featuregroup to map
@@ -75,8 +77,6 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
-// add marker to featuregroup
-myMarkers.addLayer(marker)
 
 
 //Create Goshute polygon
