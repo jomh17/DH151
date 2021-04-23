@@ -65,7 +65,7 @@ button:hover {
 .footer {
     color: white;
 	grid-area: footer;
-	padding:10px;
+	padding:300px;
 	background-color: rgb(33, 94, 48);
 
 }
