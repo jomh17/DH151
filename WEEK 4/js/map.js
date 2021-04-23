@@ -21,17 +21,6 @@ var orangeIcon = new L.Icon({
   
 
 
-//Create Goshute polygon
-//var polygon = L.polygon([
-	//[41.72549565609825, -113.75055818577421],
-	//[41.01681558776163, -114.54394648763801],
-	//[38.10834298498779, -114.96395299377926],
-	//[38.17006686582158, -112.14239248631804],
-	//[40.87636446002296, -110.73014851250934]
-	//]).addTo(map);
-
-//polygon.bindPopup("Goshute Lands");
-//polygon.setStyle({fillColor: '#ffb01f'});
 
 
 
@@ -86,3 +75,15 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
+//Create Ute polygon
+var polygon = L.polygon([
+	[40.760137273238215, -111.46583288226628],
+	[38.63644980131417, -112.43751960683204],
+	[35.72989817950143, -111.23739988743795],
+	[36.23471513254453, -104.77956909241148],
+	[38.23860971000406, -103.36989111690026],
+	[40.65280539639901, -104.07188492293405]
+	]).addTo(map);
+
+polygon.bindPopup("Núu-agha-tʉvʉ-pʉ̱  (Ute) Lands");
+polygon.setStyle({fillColor: '#ffff1f'});
