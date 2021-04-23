@@ -75,6 +75,10 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
+// add marker to featuregroup
+myMarkers.addLayer(marker)
+
+
 //Create Goshute polygon
 var polygon = L.polygon([
 	[41.72549565609825, -113.75055818577421],
