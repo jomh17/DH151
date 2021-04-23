@@ -44,6 +44,18 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+
+border: 7px solid rgb(230, 113, 191);
+margin: 5px;
+cursor: pointer; 
+border-radius: 13px;
+text-align: center;
+}
+
+button:hover {
+	background: rgb(136, 129, 224);
+	border: 7px solid rgb(83, 20, 228);
+}
   }
   
 .content {
