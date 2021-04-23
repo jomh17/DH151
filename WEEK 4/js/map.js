@@ -87,7 +87,7 @@ var polygon = L.polygon([
 polygon.bindPopup("Goshute Lands");
 polygon.setStyle({fillColor: '#ffb01f'});
 
-
+myMarkers.addTo(map)
 
 //define layers
 let layers = {
