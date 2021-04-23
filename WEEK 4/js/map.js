@@ -61,7 +61,7 @@ function mapCSV(data){
 	// loop through each entry
 	data.data.forEach(function(item,index){
 		// create marker
-		let marker = L.marker([item.latitude,item.longitude])
+		let marker = L.marker([item.latitude,item.longitude],{icon:orangeIcon})
 
 		// add marker to featuregroup
 		markers.addLayer(marker)
