@@ -8,7 +8,7 @@ let path = "data/caribu.csv";
 // global variables
 let markers = L.featureGroup();
 
-let myMarkers = L.featureGroup();
+
 
 var orangeIcon = new L.Icon({
 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
@@ -66,9 +66,7 @@ function mapCSV(data){
 		// add marker to featuregroup
 		markers.addLayer(marker)
 		
-		// add marker to featuregroup
-myMarkers.addLayer(marker)
-	})
+		
 
 	// add featuregroup to map
 	markers.addTo(map)
@@ -79,36 +77,4 @@ myMarkers.addLayer(marker)
 
 
 
-//Create Goshute polygon
-var polygon = L.polygon([
-	[41.72549565609825, -113.75055818577421],
-	[41.01681558776163, -114.54394648763801],
-	[38.10834298498779, -114.96395299377926],
-	[38.17006686582158, -112.14239248631804],
-	[40.87636446002296, -110.73014851250934]
-	]).addTo(map);
-
-polygon.bindPopup("Goshute Lands");
-polygon.setStyle({fillColor: '#ffb01f'});
-
-
-
-
-myMarkers.addTo(map)
-
-//define layers
-let layers = {
-	"My favorite sites": myMarkers
-}
-
-//add layer control box
-L.control.layers(null,layers).addTo(map)
-
-map.fitBound(myMarkers.getBounds())
-
-function flyToIndex(index){
-	map.flyTo([data[index].lat,data[index].lon],15)
-	//open the popup
-	myMarkers.getLayers()[index].openPopup()
-}
 
