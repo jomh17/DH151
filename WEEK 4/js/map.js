@@ -75,17 +75,14 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
-{"type"; "Feature",
-           "geometry"; {
-               "type"; "Polygon",
-               "coordinates"; [
-                   [
-                       [200.0, -148.0],
-                       [101.0, 0.0],
-                       [101.0, 1.0],
-                       [100.0, 1.0],
-                       [200.0, -148.0]
-                   ]
-               ]
-           }
-		}
+//Create Goshute polygon
+var polygon = L.polygon([
+	[41.72549565609825, -113.75055818577421],
+	[41.01681558776163, -114.54394648763801],
+	[38.10834298498779, -114.96395299377926],
+	[38.17006686582158, -112.14239248631804],
+	[40.87636446002296, -110.73014851250934]
+	]).addTo(map);
+
+polygon.bindPopup("Goshute Lands");
+polygon.setStyle({fillColor: '#ffb01f'});
