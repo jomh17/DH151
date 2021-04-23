@@ -87,4 +87,4 @@ function mapCSV(data){
                        [100.0, 0.0]
                    ]
                ]
-           },
+           }
