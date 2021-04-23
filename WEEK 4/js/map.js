@@ -75,17 +75,16 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
-use Ivory\GoogleMap\Base\Coordinate;
-use Ivory\GoogleMap\Overlay\Polygon;
-
-$polygon = new Polygon(
-    [
-        new Coordinate(25.774, -80.190),
-        new Coordinate(18.466, -66.118),
-        new Coordinate(32.321, -64.757),
-        new Coordinate(25.774, -80.190),
-    ],
-    ['fillOpacity' => 0.5]
-);
-$polygon->setOption('fillOpacity', 0.5);
-$map->getOverlayManager()->addPolygon($polygon);
+"type"; "Feature",
+           "geometry"; {
+               "type"; "Polygon",
+               "coordinates"; [
+                   [
+                       [100.0, 0.0],
+                       [101.0, 0.0],
+                       [101.0, 1.0],
+                       [100.0, 1.0],
+                       [100.0, 0.0]
+                   ]
+               ]
+           },
