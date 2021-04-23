@@ -86,3 +86,22 @@ var polygon = L.polygon([
 
 polygon.bindPopup("Goshute Lands");
 polygon.setStyle({fillColor: '#ffb01f'});
+
+
+
+//define layers
+let layers = {
+	"My favorite sites": myMarkers
+}
+
+//add layer control box
+L.control.layers(null,layers).addTo(map)
+
+map.fitBound(myMarkers.getBounds())
+
+function flyToIndex(index){
+	map.flyTo([data[index].lat,data[index].lon],15)
+	//open the popup
+	myMarkers.getLayers()[index].openPopup()
+}
+
