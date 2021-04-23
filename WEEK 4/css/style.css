@@ -65,21 +65,9 @@ button:hover {
 .footer {
     color: white;
 	grid-area: footer;
-	padding: 1px;
+	padding: 20px;
 	background-color: rgb(33, 94, 48);
-	height: 200px;
+	height: 100px;
 
 
-}
-#footer {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background: #ccc;
-}
-#footer p {
-	margin: 0;
-	padding: 0 20px;
-	line-height: 3em;
 }
