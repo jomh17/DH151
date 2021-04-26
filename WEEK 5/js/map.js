@@ -30,19 +30,19 @@ function readCSV(path){
 		header: true,
 		download: true,
 		complete: function(data) {
-			console.log(csvdata);
+			console.log(data);
 			// put the data in a global variable
-			csvdata = csvdata;
+			csvdata = data;
 
 			// get the last date and put it in a global variable
-			lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
+			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
 
 			// map the data for the given date
 			mapCSV(lastdate);
 		}
 	});
 }
-// map function now requires a date
+
 function mapCSV(date){
 
 	// clear layers in case you are calling this function more than once
@@ -53,7 +53,7 @@ function mapCSV(date){
 		if(item.Lat != undefined){
 			// circle options
 			let circleOptions = {
-				radius: item[date]/320000,　// divide by high number to get usable circle sizes
+				radius: getRadiusSize(item[date]),　// call a function to determine radius size
 				weight: 1,
 				color: 'white',
 				fillColor: 'red',
