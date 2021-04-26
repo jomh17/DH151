@@ -24,7 +24,6 @@ function createMap(lat,lon,zl){
 }
 
 
-// function to read csv data
 function readCSV(path){
 	Papa.parse(path, {
 		header: true,
@@ -35,7 +34,7 @@ function readCSV(path){
 			csvdata = data;
 
 			// get the last date and put it in a global variable
-			lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
+			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
 
 			// map the data for the given date
 			mapCSV(lastdate);
@@ -43,6 +42,7 @@ function readCSV(path){
 	});
 }
 
+// map function now requires a date
 function mapCSV(date){
 
 	// clear layers in case you are calling this function more than once
@@ -53,7 +53,7 @@ function mapCSV(date){
 		if(item.Lat != undefined){
 			// circle options
 			let circleOptions = {
-				radius: getRadiusSize(item[date]),　// call a function to determine radius size
+				radius: item[date]/320000,　// divide by high number to get usable circle sizes
 				weight: 1,
 				color: 'white',
 				fillColor: 'red',
