@@ -30,9 +30,9 @@ function readCSV(path){
 		header: true,
 		download: true,
 		complete: function(data) {
-			console.log(data);
+			console.log(csvdata);
 			// put the data in a global variable
-			csvdata = data;
+			csvdata = csvdata;
 
 			// get the last date and put it in a global variable
 			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
