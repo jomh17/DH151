@@ -6,6 +6,7 @@ let zl = 3;
 let path = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv';
 let markers = L.featureGroup();
 let csvdata;
+let lastdate;
 
 // initialize
 $( document ).ready(function() {
@@ -33,30 +34,40 @@ function readCSV(path){
 			// put the data in a global variable
 			csvdata = data;
 
-			// call the mapCSV function to map the data
-			mapCSV();
+			// get the last date and put it in a global variable
+			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
+
+			// map the data for the given date
+			mapCSV(lastdate);
 		}
 	});
 }
+// map function now requires a date
+function mapCSV(date){
 
-function mapCSV(){
+	// clear layers in case you are calling this function more than once
+	markers.clearLayers();
 
-	// loop through every row in the csv data
+	// loop through each entry
 	csvdata.data.forEach(function(item,index){
-		// check to make sure the Latitude column exists
 		if(item.Lat != undefined){
+			// circle options
+			let circleOptions = {
+				radius: item[date]/320000,　// divide by high number to get usable circle sizes
+				weight: 1,
+				color: 'white',
+				fillColor: 'red',
+				fillOpacity: 0.5
+			}
+			let marker = L.circleMarker([item.Lat,item.Long],circleOptions)
+			.on('mouseover',function(){
+				this.bindPopup(`${item['Country/Region']}<br>Total confirmed cases as of ${date}: ${item[date]}`).openPopup()
+			}) // show data on hover
+			markers.addLayer(marker)	
+		}   
+	});
 
-			// Lat exists, so create a circleMarker for each country
-
-
-			// add the circleMarker to the featuregroup
-
-		} // end if
-	})
-
-	// add the featuregroup to the map
-
-
-	// fit the circleMarkers to the map view
+	markers.addTo(map)
+	map.fitBounds(markers.getBounds())
 
 }
