@@ -39,3 +39,24 @@ function readCSV(path){
 	});
 }
 
+function mapCSV(){
+
+	// loop through every row in the csv data
+	csvdata.data.forEach(function(item,index){
+		// check to make sure the Latitude column exists
+		if(item.Lat != undefined){
+
+			// Lat exists, so create a circleMarker for each country
+
+
+			// add the circleMarker to the featuregroup
+
+		} // end if
+	})
+
+	// add the featuregroup to the map
+
+
+	// fit the circleMarkers to the map view
+
+}
