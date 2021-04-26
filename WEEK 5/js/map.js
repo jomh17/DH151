@@ -35,7 +35,7 @@ function readCSV(path){
 			csvdata = csvdata;
 
 			// get the last date and put it in a global variable
-			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
+			lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
 
 			// map the data for the given date
 			mapCSV(lastdate);
