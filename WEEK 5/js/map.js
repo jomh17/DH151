@@ -10,7 +10,7 @@ let lastdate;
 
 // initialize
 $( document ).ready(function() {
-    createMap(lat,lon,zl);
+	createMap(lat,lon,zl);
 	readCSV(path);
 });
 
@@ -23,7 +23,7 @@ function createMap(lat,lon,zl){
 	}).addTo(map);
 }
 
-
+// function to read csv data
 function readCSV(path){
 	Papa.parse(path, {
 		header: true,
@@ -33,27 +33,33 @@ function readCSV(path){
 			// put the data in a global variable
 			csvdata = data;
 
-			// get the last date and put it in a global variable
-			lastdate = ccsvdata.meta.fields[csvdata.meta.fields.length-1];
-
-			// map the data for the given date
+			// get the last date
+			lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
+			
+			// map the data
 			mapCSV(lastdate);
+
+			// create sidebar buttons
+			createSidebarButtons();
+
 		}
 	});
 }
 
-// map function now requires a date
 function mapCSV(date){
 
-	// clear layers in case you are calling this function more than once
+	// clear layers
 	markers.clearLayers();
+
+	// update the sidebar title with date
+	$('.sidebar-title').html(date);
 
 	// loop through each entry
 	csvdata.data.forEach(function(item,index){
 		if(item.Lat != undefined){
 			// circle options
 			let circleOptions = {
-				radius: item[date]/320000,　// divide by high number to get usable circle sizes
+				radius: getRadiusSize(item[date]),
 				weight: 1,
 				color: 'white',
 				fillColor: 'red',
@@ -62,12 +68,42 @@ function mapCSV(date){
 			let marker = L.circleMarker([item.Lat,item.Long],circleOptions)
 			.on('mouseover',function(){
 				this.bindPopup(`${item['Country/Region']}<br>Total confirmed cases as of ${date}: ${item[date]}`).openPopup()
-			}) // show data on hover
+			})
 			markers.addLayer(marker)	
-		}   
+		}
 	});
 
 	markers.addTo(map)
 	map.fitBounds(markers.getBounds())
 
+}
+
+function getRadiusSize(value){
+
+	let values = [];
+
+	// get the min and max
+	csvdata.data.forEach(function(item,index){
+		if(item[lastdate] != undefined){
+			values.push(Number(item[lastdate]))
+		}
+	})
+	let min = Math.min(...values);
+	let max = Math.max(...values)
+	
+	// per pixel if 100 pixel is the max range
+	perpixel = max/100;
+	return value/perpixel
+}
+
+function createSidebarButtons(){
+
+	// put all available dates into an array
+	// using slice to remove first 4 columns which are not dates
+	let dates = csvdata.meta.fields.slice(4)
+
+	// loop through each date and create a hover-able button
+	dates.forEach(function(item,index){
+		$('.sidebar-content').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
+	})
 }
