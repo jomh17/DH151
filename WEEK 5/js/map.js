@@ -107,3 +107,25 @@ function createSidebarButtons(){
 		$('.sidebar-content').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
 	})
 }
+
+
+
+// initialize
+$( document ).ready(function() {
+	createMap(lat,lon,zl);
+	getGeoJSON();
+});
+
+// function to get the geojson data
+function getGeoJSON(){
+
+	$.getJSON(geojsonPath,function(data){
+		console.log(data)
+
+		// put the data in a global variable
+		geojson_data = data;
+
+		// call the map function
+		mapGeoJSON()
+	})
+}

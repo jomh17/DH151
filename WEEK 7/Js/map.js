@@ -5,6 +5,11 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 let path = '';
+// put this in your global variables
+let geojsonPath = 'data/world.json';
+let geojson_data;
+let geojson_layer;
+
 
 // initialize
 $( document ).ready(function() {
